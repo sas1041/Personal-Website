@@ -1,0 +1,173 @@
+body {
+  background-color: #B6ECF3;
+}
+
+.fas {
+  color: #9A9A9A;
+}
+
+#menuIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#menuX {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+}
+
+#menu {
+  width: 0;
+  background-color: #0077ba;
+  position: fixed;
+  height: 100%;
+  overflow-x: hidden;
+  padding-top: 70px;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#menu a {
+  padding: 6px 8px 6px 20px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+}
+
+#menu a:hover {
+  color: #f1f1f1;
+}
+
+#content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+#content h1 {
+  font-size: 52px;
+}
+
+#content p {
+  color: #9A9A9A;
+  font-size: 20px;
+}
+
+#contactArrow, #portfolioArrow {
+  width: 150px;
+  height: 200px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contactArrow span, #portfolioArrow span {
+  position: relative;
+  display: none;
+  color: #9A9A9A;
+}
+
+#contactArrow {
+  left: 5px;
+}
+
+#contactArrow span {
+  left: 25px;
+}
+
+#portfolioArrow {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  right: 5px;
+}
+
+#portfolioArrow span {
+  right: 25px;
+}
+
+#socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 225px;
+  outline: 1px solid black;
+}
+
+#socials > * {
+  width: 75px;
+  height: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#linkedin {
+  background-color: #0a66c2;
+}
+
+#github {
+  background-color: #171515;
+}
+
+#twitch {
+  background-color: white;
+}
+
+.social {
+  width: 50px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 420px) {
+  #content h1 {
+    font-size: 36px;
+  }
+  #content p {
+    font-size: 18px;
+  }
+  #contactArrow, #portfolioArrow {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

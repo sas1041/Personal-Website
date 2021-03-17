@@ -1,0 +1,112 @@
+$primary-color: #9A9A9A
+$secondary-color: #0077ba
+
+body 
+    background-color: #B6ECF3
+
+.fas
+    color: $primary-color
+#menuIcon
+    position: absolute
+    top: 10px
+    right: 10px
+#menuX
+    position: absolute
+    top: 10px
+    left: 10px
+    color: white
+#menu
+    width: 0
+    background-color: $secondary-color
+    position: fixed
+    height: 100%
+    overflow-x: hidden
+    padding-top: 70px
+    z-index: 1
+    top: 0
+    right: 0
+    transition: 0.5s
+    a
+        padding: 6px 8px 6px 20px
+        text-decoration: none
+        font-size: 25px
+        color: white
+        display: block
+    a:hover
+        color: #f1f1f1
+
+#content
+    display: flex
+    text-align: center
+    flex-flow: column nowrap
+    h1
+        font-size: 52px
+    p
+        color: $primary-color
+        font-size: 20px
+
+#contactArrow, #portfolioArrow
+    width: 150px
+    height: 200px
+    position: fixed
+    top: 0
+    bottom: 0
+    margin: auto
+    display: flex
+    align-items: center
+    span
+        position: relative
+        display: none
+        color: $primary-color
+#contactArrow
+    left: 5px
+    span
+        left: 25px
+#portfolioArrow
+    justify-content: flex-end
+    right: 5px
+    span
+        right: 25px
+
+#socials 
+    display: flex
+    flex-flow: row wrap
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+    width: 75px * 3
+    outline: 1px solid black
+#socials > *
+    width: 75px
+    height: 75px
+    display: flex
+    justify-content: center
+    align-items: center
+    img
+
+#linkedin
+    background-color: #0a66c2
+#github 
+    background-color: #171515
+#twitch 
+    background-color: white
+
+.social
+    width: 50px
+    height: 50px
+    margin-left: auto
+    margin-right: auto
+
+.cursor
+    cursor: pointer
+
+@media screen and (max-width: 420px)
+    #content
+        h1
+            font-size: 36px
+        p
+            font-size: 18px
+    #contactArrow, #portfolioArrow
+        display: none
