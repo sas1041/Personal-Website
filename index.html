@@ -18,12 +18,16 @@
     <body>
         <div id="menu">
             <i id="menuX" class="fas fa-bars fa-3x cursor"></i>
+            <a href="contact.html">Contact</a>
             <a href="index.html">Home</a>
             <a href="portfolio.html">Portfolio</a>
-            <a href="contact.html">Contact</a>
         </div>
-        <main>
+        <main id="main">
             <i id="menuIcon" class="fas fa-bars fa-3x cursor"></i>
+            <a href="/contact.html" id="contactArrow" class="cursor">
+                <i class="fas fa-angle-left fa-3x"></i>
+                <span class="animate__animated animate__faster">Contact</span>
+            </a>
             <div id="content">
                 <h1>Hi, my name is Shane Smith.</h1>
                 <p>
@@ -32,29 +36,25 @@
                     Feel free to contact me at <a href="mailto:qsmith.shaneq@gmail.com">qsmith.shaneq@gmail.com</a>. <br>
                     Please take a look at my portolio to the right. <br>
                 </p>
-                <div id="page-control">
-                    <a href="/portfolio.html"><div id="portfolioArrow" class="cursor">
-                        <span class="animate__animated animate__faster">Portfolio</span>
-                        <i class="fas fa-angle-right fa-3x"></i>
-                    </div></a>
-                    <a href="/contact.html"><div id="contactArrow" class="cursor">
-                        <i class="fas fa-angle-left fa-3x"></i>
-                        <span class="animate__animated animate__faster">Contact</span>
-                    </div></a>
-                </div>
             </div>
+            <a href="/portfolio.html" id="portfolioArrow" class="cursor">
+                <span class="animate__animated animate__faster">Portfolio</span>
+                <i class="fas fa-angle-right fa-3x"></i>
+            </a>
+        </main>
+        <footer>
             <div id="socials">
-                <a href="https://www.linkedin.com/in/qsmith-qshane/" id="linkedin">
+                <a href="https://www.linkedin.com/in/qsmith-qshane/" id="linkedin" target="_blank">
                     <img class="social" src="images/linkedIn.png">
                 </a>
-                <a href="https://github.com/TheCrazyShark" id="github">
+                <a href="https://github.com/TheCrazyShark" id="github" target="_blank">
                     <img class="social" src="images/github.png">
                 </a>
-                <a href="https://www.twitch.tv/themanicshark" id="twitch">
+                <a href="https://www.twitch.tv/themanicshark" id="twitch" target="_blank">
                     <img class="social" src="images/twitch.png">
                 </a>
             </div>
-        </main>
+        </footer>
     </body>
     <script src="./vendor/jquery-3.4.1.min.js"></script>
     <script src="./vendor/jquery-ui/jquery-ui.min.js"></script>

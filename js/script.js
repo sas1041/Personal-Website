@@ -1,18 +1,35 @@
-// Hides the side menu if clicked outside
+// Hides the top menu if clicked outside
 $(document).click(function(e) {
     if (!$(e.target).is("#menu, #menuX, #menuIcon")) {
-        $("#menu").css("width", "0");
+        $("#menu").css("height", "0");
     }
 });
 
-// Shows side menu when clicked
+// Shows top menu when clicked
 $("#menuIcon").click(function() {
-    $("#menu").css("width", "200px");
+    if ($(window).width() >= 600) {
+        $("#menu").css("height", "70px");
+    }
+    else {
+        $("#menu").css("height", "200px");
+    }
 });
 
-// Hides the side menu if button is clicked
+// Hides the top menu if button is clicked
 $("#menuX").click(function() {
-    $("#menu").css("width", "0");
+    $("#menu").css("height", "0");
+});
+
+// If the top menu is open while the browser size increases it hides the top menu
+$(window).resize(function(){
+    var menuHeight = $("#menu").css("height");
+
+    if(($(this).width() <= 600) && (menuHeight != "0px")) {
+        $("#menu").css("height", "200px");
+    }
+    else if (menuHeight != "0px") {
+        $("#menu").css("height", "70px");
+    }
 });
 
 // Shows/hides text on hover over portfolio arrow
@@ -46,5 +63,24 @@ $("#contactArrow").on({
 
         span.removeClass("animate__fadeInLeft");
         span.addClass("animate__fadeOutLeft");
+    }
+});
+
+$("#requestPanel").click(function() {
+    $("#requestApp").css("display", "flex");
+});
+
+$("#garagePanel").click(function() {
+    $("#garageWebsite").css("display", "flex");
+});
+
+$(".panelX").click(function() {
+    $(this).parent().parent().css("display", "none");
+});
+
+// Hides the expanded panel if clicked outside
+$(document).click(function(e) {
+    if (!$(e.target).is(".expandedPanel, .panel, .panelX")) {
+        $(this).parent().parent().css("display", "none");
     }
 });
