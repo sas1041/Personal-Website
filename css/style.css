@@ -78,6 +78,12 @@ main {
   width: 100%;
 }
 
+.unselect {
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+  pointer-events: none;
+}
+
 #content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -156,15 +162,16 @@ main {
           box-shadow: 1px 1px 10px #9A9A9A;
 }
 
-.expandedPanel .panelX {
+.panelX {
   position: absolute;
   top: 10px;
   right: 10px;
   cursor: pointer;
   text-shadow: 1px 1px 5px black;
+  z-index: 100;
 }
 
-.expandedPanel .imageGallery {
+.imageGallery {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,22 +184,22 @@ main {
   width: 80%;
 }
 
-.expandedPanel .imageGallery img {
+.imageGallery img {
   height: 550px;
 }
 
-.expandedPanel .sideDesc {
+.imageGallery .carousel-control-next, .imageGallery .carousel-control-prev, .imageGallery .carousel-indicators {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+.sideDesc {
   width: 20%;
   background-color: #0077ba;
   color: white;
   padding-top: 35px;
   padding-left: 5px;
   padding-right: 5px;
-}
-
-.carousel-control-next, .carousel-control-prev, .carousel-indicators {
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
 }
 
 #contact p {
@@ -312,6 +319,7 @@ main {
   left: 0;
   right: 0;
   margin: auto;
+  position: fixed;
   width: 225px;
   outline: 1px solid black;
 }
@@ -353,6 +361,44 @@ main {
   cursor: pointer;
 }
 
+@media screen and (max-width: 1000px) {
+  .expandedPanel {
+    width: 95%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    overflow-y: auto;
+  }
+  .imageGallery {
+    width: 100%;
+  }
+  .sideDesc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+  .sideDesc #description {
+    width: 90%;
+  }
+  .sideDesc div {
+    width: 45%;
+  }
+  .sideDesc ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+}
+
 @media screen and (max-width: 600px) {
   #menu {
     -webkit-box-orient: vertical;
@@ -369,6 +415,9 @@ main {
 }
 
 @media screen and (max-width: 420px) {
+  .sideDesc div {
+    width: 100%;
+  }
   main {
     -webkit-box-align: start;
         -ms-flex-align: start;

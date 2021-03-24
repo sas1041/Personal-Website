@@ -50,6 +50,10 @@ main
     height: 80%
     width: 100%
 
+.unselect
+    filter: blur(2px)
+    pointer-events: none
+
 #content
     display: flex
     text-align: center
@@ -99,29 +103,29 @@ main
     background-color: rgba(209, 209, 209, 0.8)
     border: 1px solid black
     box-shadow: 1px 1px 10px $primary-color
-    .panelX
-        position: absolute
-        top: 10px
-        right: 10px
-        cursor: pointer
-        text-shadow: 1px 1px 5px black
-    .imageGallery
-        display: flex
-        align-items: center
-        justify-content: center
-        width: 80%
-        img
-            height: 550px
-    .sideDesc
-        width: 20%
-        background-color: $secondary-color
-        color: white
-        padding-top: 35px
-        padding-left: 5px
-        padding-right: 5px
-
-.carousel-control-next, .carousel-control-prev, .carousel-indicators
-    filter: invert(100%)
+.panelX
+    position: absolute
+    top: 10px
+    right: 10px
+    cursor: pointer
+    text-shadow: 1px 1px 5px black
+    z-index: 100
+.imageGallery
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 80%
+    img
+        height: 550px
+    .carousel-control-next, .carousel-control-prev, .carousel-indicators
+        filter: invert(100%)
+.sideDesc
+    width: 20%
+    background-color: $secondary-color
+    color: white
+    padding-top: 35px
+    padding-left: 5px
+    padding-right: 5px
 
 #contact
     p
@@ -191,6 +195,7 @@ main
     left: 0
     right: 0
     margin: auto
+    position: fixed
     width: 75px * 3
     outline: 1px solid black
 #socials > *
@@ -216,16 +221,38 @@ main
 .cursor
     cursor: pointer
 
+@media screen and (max-width: 1000px)
+    .expandedPanel
+        width: 95%
+        flex-flow: row wrap
+        overflow-y: auto
+    .imageGallery
+        width: 100%
+    .sideDesc
+        display: flex
+        flex-flow: row wrap
+        justify-content: center
+        text-align: center
+        width: 100%
+        #description
+            width: 90%
+        div
+            width: 45%
+        ul
+            list-style-type: none
+            padding-left: 0    
 @media screen and (max-width: 600px)
     #menu
         flex-flow: column nowrap
-        a  
+        a 
             margin-left: auto
             margin-right: auto
             text-align: center
             padding: 20px
-
 @media screen and (max-width: 420px)
+    .sideDesc
+        div
+            width: 100%
     main
         align-items: flex-start
         justify-content: center
