@@ -22,39 +22,6 @@ main
 .fas
     color: $primary-color
 
-/* Top menu and related items */
-#menuIcon
-    position: absolute
-    top: 10px
-    right: 10px
-#menu
-    width: 100%
-    background-color: $secondary-color
-    position: fixed
-    height: 0
-    overflow: hidden
-    z-index: 1
-    top: 0
-    transition: 0.5s
-    display: flex
-    flex-flow: row nowrap
-    justify-content: center
-    align-items: center
-    a
-        margin-left: 20px
-        margin-right: 20px
-        text-decoration: none
-        font-size: 25px
-        color: white
-    a:hover
-        color: #f1f1f1
-        text-decoration: underline
-    #menuX
-        position: absolute
-        top: 10px
-        right: 10px
-        color: white
-
 .unselect
     filter: blur(2px)
     pointer-events: none
@@ -91,6 +58,43 @@ main
     .panel:hover
         transform: scale(1.1)
         transition: 0.2s
+    .panelText
+            display: flex
+            justify-content: center
+            align-items: center
+            height: 20%
+/* Top menu and related items */
+#menuIcon
+    position: absolute
+    top: 10px
+    right: 10px
+#menu
+    width: 100%
+    background-color: $secondary-color
+    position: fixed
+    height: 0
+    overflow: hidden
+    z-index: 1
+    top: 0
+    transition: 0.5s
+    display: flex
+    flex-flow: row nowrap
+    justify-content: center
+    align-items: center
+    a
+        margin-left: 20px
+        margin-right: 20px
+        text-decoration: none
+        font-size: 25px
+        color: white
+    a:hover
+        color: #f1f1f1
+        text-decoration: underline
+    #menuX
+        position: absolute
+        top: 10px
+        right: 10px
+        color: white
 
 /* Expanded project information */
 .expandedPanel
@@ -226,6 +230,15 @@ main
 
 .cursor
     cursor: pointer
+
+@media screen and (max-width: 750px)
+    #projects
+        flex-flow: row wrap
+        justify-content: center
+        .panel
+            width: 300px
+            height: 300px
+            margin: 15px
 
 @media screen and (max-width: 1000px)
     .expandedPanel

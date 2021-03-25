@@ -30,58 +30,6 @@ main {
   color: #0D4850;
 }
 
-/* Top menu and related items */
-#menuIcon {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
-#menu {
-  width: 100%;
-  background-color: #0077ba;
-  position: fixed;
-  height: 0;
-  overflow: hidden;
-  z-index: 1;
-  top: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#menu a {
-  margin-left: 20px;
-  margin-right: 20px;
-  text-decoration: none;
-  font-size: 25px;
-  color: white;
-}
-
-#menu a:hover {
-  color: #f1f1f1;
-  text-decoration: underline;
-}
-
-#menu #menuX {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  color: white;
-}
-
 .unselect {
   -webkit-filter: blur(2px);
           filter: blur(2px);
@@ -146,6 +94,71 @@ main {
           transform: scale(1.1);
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+#projects .panelText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 20%;
+}
+
+/* Top menu and related items */
+#menuIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#menu {
+  width: 100%;
+  background-color: #0077ba;
+  position: fixed;
+  height: 0;
+  overflow: hidden;
+  z-index: 1;
+  top: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#menu a {
+  margin-left: 20px;
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+}
+
+#menu a:hover {
+  color: #f1f1f1;
+  text-decoration: underline;
+}
+
+#menu #menuX {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
 }
 
 /* Expanded project information */
@@ -367,6 +380,23 @@ main {
 
 .cursor {
   cursor: pointer;
+}
+
+@media screen and (max-width: 750px) {
+  #projects {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #projects .panel {
+    width: 300px;
+    height: 300px;
+    margin: 15px;
+  }
 }
 
 @media screen and (max-width: 1000px) {
