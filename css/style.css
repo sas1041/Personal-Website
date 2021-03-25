@@ -1,13 +1,36 @@
+/* CSS that applies to everything */
 body {
   background-color: #B6ECF3;
+  color: #0D4850;
   margin: 0;
   padding: 0;
+  font-family: Georgia, serif;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  position: fixed;
+  height: 80%;
+  width: 100%;
 }
 
 .fas {
-  color: #9A9A9A;
+  color: #0D4850;
 }
 
+/* Top menu and related items */
 #menuIcon {
   position: absolute;
   top: 10px;
@@ -59,31 +82,13 @@ body {
   color: white;
 }
 
-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  position: fixed;
-  height: 80%;
-  width: 100%;
-}
-
 .unselect {
   -webkit-filter: blur(2px);
           filter: blur(2px);
   pointer-events: none;
 }
 
+/* Main content */
 #content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -101,7 +106,6 @@ main {
 }
 
 #content p {
-  color: #9A9A9A;
   font-size: 20px;
 }
 
@@ -116,7 +120,7 @@ main {
 #projects .panel {
   width: 200px;
   height: 200px;
-  background-color: #9A9A9A;
+  background-color: #0077ba;
   border: 1px solid black;
   -webkit-box-shadow: 1px 1px 5px black;
           box-shadow: 1px 1px 5px black;
@@ -133,7 +137,7 @@ main {
 
 #projects .panel p {
   margin: 0;
-  color: black;
+  color: white;
   font-weight: 400;
 }
 
@@ -144,6 +148,7 @@ main {
   transition: 0.2s;
 }
 
+/* Expanded project information */
 .expandedPanel {
   display: none;
   position: fixed;
@@ -202,6 +207,7 @@ main {
   padding-right: 5px;
 }
 
+/* Contact form */
 #contact p {
   text-align: left;
 }
@@ -264,6 +270,7 @@ main {
   padding-left: 30px;
 }
 
+/* Navigation arrows */
 #contactArrow, #portfolioArrow {
   width: 100px;
   height: 200px;
@@ -280,7 +287,7 @@ main {
 #contactArrow span, #portfolioArrow span {
   position: absolute;
   display: none;
-  color: #9A9A9A;
+  color: #0D4850;
 }
 
 #contactArrow {
@@ -306,6 +313,7 @@ main {
   width: 100px;
 }
 
+/* Link styling for social media */
 #socials {
   display: -webkit-box;
   display: -ms-flexbox;
