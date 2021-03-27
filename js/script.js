@@ -68,14 +68,20 @@ $("#contactArrow").on({
 
 $("#requestPanel").click(function() {
     $("#requestApp").css("display", "flex");
+    $("#portfolio").addClass("unselect");
+    $("#socials").addClass("unselect");
 });
 
 $("#garagePanel").click(function() {
     $("#garageWebsite").css("display", "flex");
+    $("#portfolio").addClass("unselect");
+    $("#socials").addClass("unselect");
 });
 
 $(".panelX").click(function() {
     $(this).parent().parent().css("display", "none");
+    $("#portfolio").removeClass("unselect")
+    $("#socials").removeClass("unselect");
 });
 
 // Hides the expanded panel if clicked outside
