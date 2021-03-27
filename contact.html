@@ -15,14 +15,14 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link rel="stylesheet" href="./vendor/font-awesome/css/all.min.css">
     </head>
-    <body onload="alert('This page is still in development and is not fully functional')">
-        <div id="menu">
-            <i id="menuX" class="fas fa-bars fa-3x cursor"></i>
-            <a href="contact.html">Contact</a>
-            <a href="index.html">Home</a>
-            <a href="portfolio.html">Portfolio</a>
-        </div>
+    <body onload="console.log('This page is still under development. It does not have the mail functionality yet.')">
         <main id="contact">
+            <div id="menu">
+                <i id="menuX" class="fas fa-bars fa-3x cursor"></i>
+                <a href="contact.html">Contact</a>
+                <a href="index.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+            </div>
             <i id="menuIcon" class="fas fa-bars fa-3x cursor"></i>
             <div class="empty"></div> <!-- Used to fill space that arrow link should take up -->
             <div id="content">
@@ -30,7 +30,7 @@
                 <p>If you would like to get in touch, talk about a project or collaboration,
                     fill out the form below, email me at qsmith.shaneq@gmail.com or call
                     me at 412-773-3113!</p>
-                <form id="contactForm">
+                <form action=”mailto:qsmith.shaneq@gmail.com” enctype=”multipart/form-data” method=”POST” id="contactForm">
                     <div class="form-element">
                         <label for="email">Email:</label>
                         <input type="email" name="email" id="subject" placeholder="something@generic.com"/>
@@ -43,6 +43,7 @@
                         <label for="message">Message:</label>
                         <textarea name="message" id="message"></textarea>
                     </div>
+                    <button id="contactSubmit" class="button">Send Email</button>
                 </form>
             </div>
             <a href="index.html" id="portfolioArrow" class="cursor">
