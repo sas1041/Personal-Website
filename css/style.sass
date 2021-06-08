@@ -104,16 +104,16 @@ main
 /* Expanded project information */
 .expandedPanel
     display: none /* hidden by default */
-    position: fixed
+    position: absolute
+    flex-flow: row wrap
+    overflow-y: auto
     z-index: 1 /* Sit on top */
-    top: 0
-    bottom: 0
-    left: 0
-    right: 0
-    margin: auto
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
     width: 80%
-    height: 80%
-    overflow: hideen
+    min-height: 600px
+    max-height: 80%
     background-color: rgba(209, 209, 209, 0.8)
     border: 1px solid black
     box-shadow: 1px 1px 10px $soft-color
@@ -125,21 +125,36 @@ main
     text-shadow: 1px 1px 5px black
     z-index: 100
 .imageGallery
-    display: flex
-    align-items: center
-    justify-content: center
-    width: 80%
-    img
-        height: 550px
+    width: 100%
     .carousel-control-next, .carousel-control-prev, .carousel-indicators
         filter: invert(100%)
-.sideDesc
-    width: 20%
+    .carousel-inner img
+        margin: auto
+    * 
+        box-sizing: border-box
+    img
+        width: 100%
+        max-width: 1200px
+        margin-left: auto
+        margin-right: auto
+        display: block
+/* Textbox for project description */
+.projectDescription
     background-color: $secondary-color
     color: white
-    padding-top: 35px
-    padding-left: 5px
-    padding-right: 5px
+    padding-top: 10px
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+    text-align: center
+    width: 100%
+    .description
+        width: 90%
+    div
+        width: 45%
+    ul
+        list-style-type: none
+        padding-left: 0   
 
 /* Contact form */
 #contact
@@ -200,7 +215,7 @@ main
     outline: none
 
 /* Navigation arrows */
-#contactArrow, #portfolioArrow
+#leftArrow, #rightArrow
     width: 100px
     height: 200px
     display: flex
@@ -211,11 +226,11 @@ main
         position: absolute
         display: none
         color: $primary-color
-#contactArrow
+#leftArrow
     left: 15px
     span
         left: 50px
-#portfolioArrow
+#rightArrow
     justify-content: flex-end
     right: 15px
     span
@@ -259,23 +274,6 @@ main
 @media screen and (max-width: 1000px)
     .expandedPanel
         width: 95%
-        flex-flow: row wrap
-        overflow-y: auto
-    .imageGallery
-        width: 100%
-    .sideDesc
-        display: flex
-        flex-flow: row wrap
-        justify-content: center
-        text-align: center
-        width: 100%
-        #description
-            width: 90%
-        div
-            width: 45%
-        ul
-            list-style-type: none
-            padding-left: 0    
     #socials 
         top: 10px
         left: 0
@@ -301,6 +299,9 @@ main
             text-align: center
 
 @media screen and (max-width: 750px)
+    .imageGallery
+        img
+            max-width: 350px
     main
         height: 100%
     #projects
@@ -327,7 +328,7 @@ main
         position: relative
 
 @media screen and (max-width: 420px)
-    .sideDesc
+    .projectDescription
         div
             width: 100%
     main
@@ -342,5 +343,5 @@ main
         p
             font-size: 16px
             text-align: center
-    #contactArrow, #portfolioArrow, .empty
+    #leftArrow, #rightArrow, .empty
         display: none

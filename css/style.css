@@ -173,16 +173,20 @@ main {
 /* Expanded project information */
 .expandedPanel {
   display: none;
-  position: fixed;
+  position: absolute;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  overflow-y: auto;
   z-index: 1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 80%;
-  height: 80%;
-  overflow: hideen;
+  min-height: 600px;
+  max-height: 80%;
   background-color: rgba(209, 209, 209, 0.8);
   border: 1px solid black;
   -webkit-box-shadow: 1px 1px 10px #9A9A9A;
@@ -199,20 +203,7 @@ main {
 }
 
 .imageGallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 80%;
-}
-
-.imageGallery img {
-  height: 550px;
+  width: 100%;
 }
 
 .imageGallery .carousel-control-next, .imageGallery .carousel-control-prev, .imageGallery .carousel-indicators {
@@ -220,13 +211,53 @@ main {
           filter: invert(100%);
 }
 
-.sideDesc {
-  width: 20%;
+.imageGallery .carousel-inner img {
+  margin: auto;
+}
+
+.imageGallery * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.imageGallery img {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* Textbox for project description */
+.projectDescription {
   background-color: #0077ba;
   color: white;
-  padding-top: 35px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.projectDescription .description {
+  width: 90%;
+}
+
+.projectDescription div {
+  width: 45%;
+}
+
+.projectDescription ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
 /* Contact form */
@@ -330,7 +361,7 @@ main {
 }
 
 /* Navigation arrows */
-#contactArrow, #portfolioArrow {
+#leftArrow, #rightArrow {
   width: 100px;
   height: 200px;
   display: -webkit-box;
@@ -343,28 +374,28 @@ main {
   position: relative;
 }
 
-#contactArrow span, #portfolioArrow span {
+#leftArrow span, #rightArrow span {
   position: absolute;
   display: none;
   color: #0D4850;
 }
 
-#contactArrow {
+#leftArrow {
   left: 15px;
 }
 
-#contactArrow span {
+#leftArrow span {
   left: 50px;
 }
 
-#portfolioArrow {
+#rightArrow {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
   right: 15px;
 }
 
-#portfolioArrow span {
+#rightArrow span {
   right: 50px;
 }
 
@@ -432,38 +463,6 @@ main {
 @media screen and (max-width: 1000px) {
   .expandedPanel {
     width: 95%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    overflow-y: auto;
-  }
-  .imageGallery {
-    width: 100%;
-  }
-  .sideDesc {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    text-align: center;
-    width: 100%;
-  }
-  .sideDesc #description {
-    width: 90%;
-  }
-  .sideDesc div {
-    width: 45%;
-  }
-  .sideDesc ul {
-    list-style-type: none;
-    padding-left: 0;
   }
   #socials {
     top: 10px;
@@ -496,6 +495,9 @@ main {
 }
 
 @media screen and (max-width: 750px) {
+  .imageGallery img {
+    max-width: 350px;
+  }
   main {
     height: 100%;
   }
@@ -539,7 +541,7 @@ main {
 }
 
 @media screen and (max-width: 420px) {
-  .sideDesc div {
+  .projectDescription div {
     width: 100%;
   }
   main {
@@ -562,7 +564,7 @@ main {
     font-size: 16px;
     text-align: center;
   }
-  #contactArrow, #portfolioArrow, .empty {
+  #leftArrow, #rightArrow, .empty {
     display: none;
   }
 }
