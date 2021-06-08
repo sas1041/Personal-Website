@@ -33,7 +33,7 @@ $(window).resize(function(){
 });
 
 // Shows/hides text on hover over portfolio arrow
-$("#portfolioArrow").on({
+$("#rightArrow").on({
     mouseenter: function () {
         var span = $(this).find("span");
 
@@ -50,7 +50,7 @@ $("#portfolioArrow").on({
 });
 
 // Shows/hides text on hover over contact arrow
-$("#contactArrow").on({
+$("#leftArrow").on({
     mouseenter: function () {
         var span = $(this).find("span");
 
@@ -66,27 +66,34 @@ $("#contactArrow").on({
     }
 });
 
+$(".panel").click(function() {
+    
+})
+
+// Show expanded panel
 $("#requestPanel").click(function() {
     $("#requestApp").css("display", "flex");
     $("#portfolio").addClass("unselect");
-    $("#socials").addClass("unselect");
 });
-
+// Show expanded panel
 $("#garagePanel").click(function() {
     $("#garageWebsite").css("display", "flex");
     $("#portfolio").addClass("unselect");
-    $("#socials").addClass("unselect");
 });
 
 $(".panelX").click(function() {
-    $(this).parent().parent().css("display", "none");
+    $(this).parents(".expandedPanel").css("display", "none");
     $("#portfolio").removeClass("unselect")
-    $("#socials").removeClass("unselect");
 });
 
 // Hides the expanded panel if clicked outside
 $(document).click(function(e) {
-    if (!$(e.target).is(".expandedPanel, .panel, .panelX")) {
-        $(this).parent().parent().css("display", "none");
+    var obj = $(".expandedPanel");
+    var panel = $(".panel");
+
+    if (!$(e.target).closest(obj).length && !$(e.target).closest(panel).length) {
+        $(".expandedPanel").css("display", "none");
+        $("#portfolio").removeClass("unselect");
     }
 });
+
