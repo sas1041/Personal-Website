@@ -34,13 +34,16 @@ main
     flex-flow: column nowrap
     width: 60%
     h1
-        font-size: 52px
+        font-size: 3em
     p
-        font-size: 20px
+        font-size: 1.2em
+        padding: 0
+        margin: 0.5em 0
     a:link
         color: $primary-color
     a:hover
         text-decoration: none
+    #aboutme
 #projects
     display: flex
     justify-content: space-around
@@ -335,13 +338,20 @@ main
         align-items: flex-start
         justify-content: center
     #content
-        margin-top: 70px
+        margin-top: 25%
         width: 100%
         padding: 0px 20px
         h1
-            font-size: 32px
+            font-size: 2.5em
         p
-            font-size: 16px
-            text-align: center
+            font-size: 1.3em
+            margin: 0.8em 0
     #leftArrow, #rightArrow, .empty
         display: none
+    #menu
+        a:first-child
+            order: 3
+        a:nth-child(2)
+            order: 1
+        a:nth-child(2)
+            order: 2
