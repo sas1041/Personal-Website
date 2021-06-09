@@ -10,16 +10,16 @@
         <meta name="keyword" content="Shane Smith, SRU, Slippery Rock University, Web, Engineer, Computer Science, Cybersecurity, Programmer, Full Stack Developer, Developer">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/png" href="images/favicon.png"/>
-        <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./vendor/jquery-ui/jquery-ui.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link rel="stylesheet" href="./vendor/font-awesome/css/all.min.css">
+        <link rel="stylesheet" href="./css/style.min.css">
     </head>
     <body>
         <div id="menu">
             <i id="menuX" class="fas fa-bars fa-3x cursor"></i>
             <a href="contact.html">Contact</a>
-            <a href="index.html">Home</a>
+            <a id="home" href="index.html">Home</a>
             <a href="portfolio.html">Portfolio</a>
         </div>
         <main id="main">
@@ -30,12 +30,12 @@
             </a>
             <div id="content">
                 <h1>Hi, my name is Shane Smith.</h1>
-                <p>
-                    I am a student at Slippery Rock University majoring in Computer Science and Cyber Security. <br>
-                    Away from my school work I am a Full Stack Developer and gamer at heart. <br>
-                    Feel free to contact me at <a href="mailto:qsmith.shaneq@gmail.com">qsmith.shaneq@gmail.com</a>. <br>
-                    Please take a look at my portolio to the right. <br>
-                </p>
+                <div id="aboutme">
+                    <p>I am a student at Slippery Rock University majoring in Computer Science and Cyber Security.</p>
+                    <p>Outside of my school work, I am a Full Stack Developer, digital creator, and gamer at heart.</p>
+                    <p>Please feel free to contact me at <a href="mailto:qsmith.shaneq@gmail.com">qsmith.shaneq@gmail.com</a> or other ways via the contact page.</p>
+                    <p>Don't forget to check out some of my previous work in my portfolio!</p>
+                </div>
             </div>
             <a href="/portfolio.html" id="rightArrow" class="cursor">
                 <span class="animate__animated animate__faster">Portfolio</span>
@@ -58,5 +58,5 @@
     </body>
     <script src="./vendor/jquery-3.4.1.min.js"></script>
     <script src="./vendor/jquery-ui/jquery-ui.min.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="./js/script.min.js"></script>
 </html> 
