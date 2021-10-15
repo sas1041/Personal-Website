@@ -55,6 +55,8 @@ main
         box-shadow: 1px 1px 5px black
         transition: 0.2s
         cursor: pointer
+        margin: 20px
+        flex-shrink: 0
         img
             width: 100%
             height: 80%
@@ -129,20 +131,17 @@ main
     z-index: 100
 .imageGallery
     width: 100%
-    .carousel-control-next, .carousel-control-prev, .carousel-indicators
-        filter: invert(100%)
-    .carousel-inner img
-        margin: auto
-    * 
-        box-sizing: border-box
     img
-        width: 100%
-        max-width: 1200px
+        max-width: 1000px
         margin-left: auto
         margin-right: auto
         display: block
+        box-sizing: border-box
+    .mobileIMG
+        max-height: 400px
 /* Textbox for project description */
 .projectDescription
+    width: 100%
     background-color: $secondary-color
     color: white
     padding-top: 10px
@@ -150,7 +149,6 @@ main
     flex-flow: row wrap
     justify-content: center
     text-align: center
-    width: 100%
     .description
         width: 90%
     div
@@ -274,6 +272,7 @@ main
 .cursor
     cursor: pointer
 
+/* Tablet/Smaller Laptop */
 @media screen and (max-width: 1000px)
     .expandedPanel
         width: 95%
@@ -301,6 +300,7 @@ main
         p
             text-align: center
 
+// Tablet
 @media screen and (max-width: 750px)
     .imageGallery
         img
@@ -315,6 +315,7 @@ main
             height: 300px
             margin: 15px
 
+/* Changes method of menu display to prevent overlapping */
 @media screen and (max-width: 600px)
     #menu
         flex-flow: column nowrap
@@ -324,12 +325,14 @@ main
             text-align: center
             padding: 20px
 
+/* Changes social position to prevent overlapping */
 @media (min-width: 600px) 
     #socials > *:hover
         height: 100px
         margin-top: -25px
         position: relative
 
+/* Regular Phone */
 @media screen and (max-width: 420px)
     .projectDescription
         div

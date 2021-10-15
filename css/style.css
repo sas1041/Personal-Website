@@ -86,6 +86,9 @@ main {
   -webkit-transition: 0.2s;
   transition: 0.2s;
   cursor: pointer;
+  margin: 20px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 #projects .panel img {
@@ -208,30 +211,22 @@ main {
   width: 100%;
 }
 
-.imageGallery .carousel-control-next, .imageGallery .carousel-control-prev, .imageGallery .carousel-indicators {
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
-}
-
-.imageGallery .carousel-inner img {
-  margin: auto;
-}
-
-.imageGallery * {
+.imageGallery img {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-.imageGallery img {
-  width: 100%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+.imageGallery .mobileIMG {
+  max-height: 400px;
 }
 
 /* Textbox for project description */
 .projectDescription {
+  width: 100%;
   background-color: #0077ba;
   color: white;
   padding-top: 10px;
@@ -246,7 +241,6 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  width: 100%;
 }
 
 .projectDescription .description {
@@ -462,6 +456,7 @@ main {
   cursor: pointer;
 }
 
+/* Tablet/Smaller Laptop */
 @media screen and (max-width: 1000px) {
   .expandedPanel {
     width: 95%;
@@ -519,6 +514,7 @@ main {
   }
 }
 
+/* Changes method of menu display to prevent overlapping */
 @media screen and (max-width: 600px) {
   #menu {
     -webkit-box-orient: vertical;
@@ -534,6 +530,7 @@ main {
   }
 }
 
+/* Changes social position to prevent overlapping */
 @media (min-width: 600px) {
   #socials > *:hover {
     height: 100px;
@@ -542,6 +539,7 @@ main {
   }
 }
 
+/* Regular Phone */
 @media screen and (max-width: 420px) {
   .projectDescription div {
     width: 100%;
