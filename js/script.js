@@ -85,6 +85,11 @@ $("#uploadHubPanel").click(function() {
     $("#uploadHub").css("display", "flex");
     $("#portfolio").addClass("unselect");
 });
+// Show expanded panel
+$("#covidTrackerPanel").click(function() {
+    $("#covidTracker").css("display", "flex");
+    $("#portfolio").addClass("unselect");
+});
 
 $(".panelX").click(function() {
     $(this).parents(".expandedPanel").css("display", "none");
