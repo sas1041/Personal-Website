@@ -74,6 +74,10 @@ main {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 #projects .panel {
@@ -258,7 +262,7 @@ main {
 
 /* Contact form */
 #contact p {
-  text-align: left;
+  text-align: center;
 }
 
 #contactForm {
@@ -413,7 +417,7 @@ main {
   left: 0;
   right: 0;
   margin: auto;
-  width: 150px;
+  width: 225px;
 }
 
 #socials > * {
@@ -441,7 +445,7 @@ main {
   background-color: #171515;
 }
 
-#twitch {
+#expo {
   background-color: white;
 }
 
@@ -456,10 +460,10 @@ main {
   cursor: pointer;
 }
 
-/* Tablet/Smaller Laptop */
-@media screen and (max-width: 1000px) {
-  .expandedPanel {
-    width: 95%;
+/* Make sure main text content doesn't get cut off */
+@media screen and (max-width: 1250px) {
+  main {
+    height: 100%;
   }
   #socials {
     top: 10px;
@@ -478,69 +482,26 @@ main {
     width: 40px;
     height: 40px;
   }
-  .form-element label, .form-element input, .form-element textarea {
-    width: 100%;
+}
+
+/* Tablet/Smaller Laptop */
+@media screen and (max-width: 1000px) {
+  .expandedPanel {
+    width: 95%;
   }
-  .form-element label {
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 20px;
-  }
+  /*.form-element label, .form-element input, .form-element textarea
+        width: 100%*/
+  /*.form-element label
+        text-align: center
+        margin-bottom: 10px
+        font-size: 20px*/
   #content p {
     text-align: center;
   }
 }
 
-@media screen and (max-width: 750px) {
-  .imageGallery img {
-    max-width: 350px;
-  }
-  main {
-    height: 100%;
-  }
-  #projects {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  #projects .panel {
-    width: 300px;
-    height: 300px;
-    margin: 15px;
-  }
-}
-
-/* Changes method of menu display to prevent overlapping */
-@media screen and (max-width: 600px) {
-  #menu {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
-  }
-  #menu a {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    padding: 20px;
-  }
-}
-
-/* Changes social position to prevent overlapping */
-@media (min-width: 600px) {
-  #socials > *:hover {
-    height: 100px;
-    margin-top: -25px;
-    position: relative;
-  }
-}
-
-/* Regular Phone */
-@media screen and (max-width: 420px) {
+/* Tablet */
+@media screen and (max-width: 840px) {
   .projectDescription div {
     width: 100%;
   }
@@ -566,6 +527,38 @@ main {
   }
   #leftArrow, #rightArrow, .empty {
     display: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .imageGallery img {
+    max-width: 350px;
+  }
+  #projects {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #projects .panel {
+    width: 300px;
+    height: 300px;
+    margin: 15px;
+  }
+}
+
+/* Changes method of menu display to prevent overlapping */
+@media screen and (max-width: 600px) {
+  #menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+  }
+  #menu a {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 20px;
   }
   #menu a:first-child {
     -webkit-box-ordinal-group: 4;

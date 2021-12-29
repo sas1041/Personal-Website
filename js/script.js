@@ -66,10 +66,6 @@ $("#leftArrow").on({
     }
 });
 
-$(".panel").click(function() {
-    
-})
-
 // Show expanded panel
 $("#requestPanel").click(function() {
     $("#requestApp").css("display", "flex");
@@ -90,7 +86,16 @@ $("#covidTrackerPanel").click(function() {
     $("#covidTracker").css("display", "flex");
     $("#portfolio").addClass("unselect");
 });
+// Show expanded panel
+$("#conversionAppPanel").click(function() {
+    $("#conversionApp").css("display", "flex");
+    $("#portfolio").addClass("unselect");
+});
 
+// Hide expanded panel
+$(".panel").click(function() {
+    
+})
 $(".panelX").click(function() {
     $(this).parents(".expandedPanel").css("display", "none");
     $("#portfolio").removeClass("unselect")

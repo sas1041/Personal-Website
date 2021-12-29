@@ -47,6 +47,7 @@ main
 #projects
     display: flex
     justify-content: space-around
+    flex-flow: row wrap
     .panel
         width: 200px
         height: 200px
@@ -160,7 +161,7 @@ main
 /* Contact form */
 #contact
     p
-        text-align: left
+        text-align: center
 #contactForm
     width: 80%
     margin-left: auto
@@ -248,7 +249,7 @@ main
     left: 0
     right: 0
     margin: auto
-    width: 75px * 2
+    width: 75px * 3
 #socials > *
     width: 75px
     height: 75px
@@ -261,7 +262,7 @@ main
     background-color: #0a66c2
 #github 
     background-color: #171515
-#twitch 
+#expo 
     background-color: white
 .social
     width: 50px
@@ -272,10 +273,10 @@ main
 .cursor
     cursor: pointer
 
-/* Tablet/Smaller Laptop */
-@media screen and (max-width: 1000px)
-    .expandedPanel
-        width: 95%
+/* Make sure main text content doesn't get cut off */
+@media screen and (max-width: 1250px)
+    main
+        height: 100%
     #socials 
         top: 10px
         left: 0
@@ -290,50 +291,23 @@ main
     .social
         width: 40px
         height: 40px
-    .form-element label, .form-element input, .form-element textarea
-        width: 100%
-    .form-element label
+
+/* Tablet/Smaller Laptop */
+@media screen and (max-width: 1000px)
+    .expandedPanel
+        width: 95%
+    /*.form-element label, .form-element input, .form-element textarea
+        width: 100%*/
+    /*.form-element label
         text-align: center
         margin-bottom: 10px
-        font-size: 20px
+        font-size: 20px*/
     #content
         p
             text-align: center
 
-// Tablet
-@media screen and (max-width: 750px)
-    .imageGallery
-        img
-            max-width: 350px
-    main
-        height: 100%
-    #projects
-        flex-flow: row wrap
-        justify-content: center
-        .panel
-            width: 300px
-            height: 300px
-            margin: 15px
-
-/* Changes method of menu display to prevent overlapping */
-@media screen and (max-width: 600px)
-    #menu
-        flex-flow: column nowrap
-        a 
-            margin-left: auto
-            margin-right: auto
-            text-align: center
-            padding: 20px
-
-/* Changes social position to prevent overlapping */
-@media (min-width: 600px) 
-    #socials > *:hover
-        height: 100px
-        margin-top: -25px
-        position: relative
-
-/* Regular Phone */
-@media screen and (max-width: 420px)
+/* Tablet */
+@media screen and (max-width: 840px)
     .projectDescription
         div
             width: 100%
@@ -351,7 +325,28 @@ main
             margin: 0.8em 0
     #leftArrow, #rightArrow, .empty
         display: none
+
+// Phone
+@media screen and (max-width: 750px)
+    .imageGallery
+        img
+            max-width: 350px
+    #projects
+        justify-content: center
+        .panel
+            width: 300px
+            height: 300px
+            margin: 15px
+
+/* Changes method of menu display to prevent overlapping */
+@media screen and (max-width: 600px)
     #menu
+        flex-flow: column nowrap
+        a 
+            margin-left: auto
+            margin-right: auto
+            text-align: center
+            padding: 20px
         a:first-child
             order: 3
         a:nth-child(2)
