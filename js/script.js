@@ -85,14 +85,14 @@ $("#conversionAppPanel").click(function() {
 
 // Blur background when panel is selected
 $(".panel").click(function() {
-    $("#portfolio").addClass("unselect");
+    $("#portfolio  > *").addClass("unselect");
     $("#socials").addClass("unselect");
 });
 
 // Hide expanded panel with x button
 $(".panelX").click(function() {
     $(this).parents(".expandedPanel").css("display", "none");
-    $("#portfolio").removeClass("unselect");
+    $("#portfolio > *").removeClass("unselect");
     $("#socials").removeClass("unselect");
 });
 
@@ -103,7 +103,7 @@ $(document).click(function(e) {
 
     if (!$(e.target).closest(obj).length && !$(e.target).closest(panel).length) {
         $(".expandedPanel").css("display", "none");
-        $("#portfolio").removeClass("unselect");
+        $("#portfolio > *").removeClass("unselect");
         $("#socials").removeClass("unselect");
     }
 });

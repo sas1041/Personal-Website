@@ -41,7 +41,7 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  margin-top: auto;
+  margin: auto;
   width: 60%;
 }
 
