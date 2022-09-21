@@ -1,10 +1,3 @@
-// Hides the top menu if clicked outside
-$(document).click(function(e) {
-    if (!$(e.target).is("#menu, #menuX, #menuIcon")) {
-        $("#menu").css("height", "0");
-    }
-});
-
 // Shows top menu when clicked
 $("#menuIcon").click(function() {
     if ($(window).width() >= 600) {
@@ -15,9 +8,16 @@ $("#menuIcon").click(function() {
     }
 });
 
-// Hides the top menu if button is clicked
+// Hides the top menu if x button is clicked
 $("#menuX").click(function() {
     $("#menu").css("height", "0");
+});
+
+// Hides the top menu if clicked outside
+$(document).click(function(e) {
+    if (!$(e.target).is("#menu, #menuX, #menuIcon")) {
+        $("#menu").css("height", "0");
+    }
 });
 
 // If the top menu is open while the browser size increases it hides the top menu
@@ -69,36 +69,31 @@ $("#leftArrow").on({
 // Show expanded panel
 $("#requestPanel").click(function() {
     $("#requestApp").css("display", "flex");
-    $("#portfolio").addClass("unselect");
 });
-// Show expanded panel
 $("#garagePanel").click(function() {
     $("#garageWebsite").css("display", "flex");
-    $("#portfolio").addClass("unselect");
 });
-// Show expanded panel
 $("#uploadHubPanel").click(function() {
     $("#uploadHub").css("display", "flex");
-    $("#portfolio").addClass("unselect");
 });
-// Show expanded panel
 $("#covidTrackerPanel").click(function() {
     $("#covidTracker").css("display", "flex");
-    $("#portfolio").addClass("unselect");
 });
-// Show expanded panel
 $("#conversionAppPanel").click(function() {
     $("#conversionApp").css("display", "flex");
-    $("#portfolio").addClass("unselect");
 });
 
-// Hide expanded panel
+// Blur background when panel is selected
 $(".panel").click(function() {
-    
-})
+    $("#portfolio").addClass("unselect");
+    $("#socials").addClass("unselect");
+});
+
+// Hide expanded panel with x button
 $(".panelX").click(function() {
     $(this).parents(".expandedPanel").css("display", "none");
-    $("#portfolio").removeClass("unselect")
+    $("#portfolio").removeClass("unselect");
+    $("#socials").removeClass("unselect");
 });
 
 // Hides the expanded panel if clicked outside
@@ -109,6 +104,7 @@ $(document).click(function(e) {
     if (!$(e.target).closest(obj).length && !$(e.target).closest(panel).length) {
         $(".expandedPanel").css("display", "none");
         $("#portfolio").removeClass("unselect");
+        $("#socials").removeClass("unselect");
     }
 });
 

@@ -12,13 +12,10 @@ body
 
 main
     display: flex
-    justify-content: space-between
+    justify-content: center
     align-items: center
-    flex-flow: row nowrap
-    position: fixed
-    overflow-y: auto
-    height: 80%
-    width: 100%
+    height: calc(100vh - 55px)
+    margin-top: 55px
 
 .fas
     color: $primary-color
@@ -32,9 +29,11 @@ main
     display: flex
     text-align: center
     flex-flow: column nowrap
+    margin-top: auto
     width: 60%
     h1
         font-size: 3em
+        margin-top: 0
     p
         font-size: 1.2em
         padding: 0
@@ -43,7 +42,6 @@ main
         color: $primary-color
     a:hover
         text-decoration: none
-    #aboutme
 #projects
     display: flex
     justify-content: space-around
@@ -74,6 +72,7 @@ main
             justify-content: center
             align-items: center
             height: 20%
+
 /* Top menu and related items */
 #menuIcon
     position: absolute
@@ -162,11 +161,11 @@ main
 #contact
     p
         text-align: center
-#contactForm
+/*#contactForm
     width: 80%
     margin-left: auto
-    margin-right: auto
-.form-element
+    margin-right: auto*/
+/*.form-element
     display: flex
     flex-flow: row wrap
     justify-content: center
@@ -194,8 +193,8 @@ main
         background-position: 5px 5px
         background-repeat: no-repeat
         background-size: 20px
-        padding-left: 30px
-.button
+        padding-left: 30px*/
+/*.button
     background-color: $secondary-color
     color: white
     box-shadow: 0 3px 5px $soft-color
@@ -209,12 +208,12 @@ main
     align-items: center
     justify-content: center
     box-shadow: 0 8px #4d4d4d
-    margin-top: 10px
-.button:active
+    margin-top: 10px*/
+/*.button:active
     box-shadow: 0 4px #2b2b2b
-    transform: translateY(4px)
-.button:focus
-    outline: none
+    transform: translateY(4px)*/
+/*.button:focus
+    outline: none*/
 
 /* Navigation arrows */
 #leftArrow, #rightArrow
@@ -223,7 +222,9 @@ main
     display: flex
     align-items: center
     text-decoration: none
-    position: relative
+    position: fixed
+    top: 50%
+    margin-top: -100px
     span
         position: absolute
         display: none
@@ -237,60 +238,41 @@ main
     right: 15px
     span
         right: 50px
-.empty
-    width: 100px
 
 /* Link styling for social media */
 #socials 
     display: flex
     flex-flow: row wrap
     position: fixed
-    bottom: 0
+    top: 10px
     left: 0
-    right: 0
+    bottom: auto
+    right: auto
     margin: auto
-    width: 75px * 3
+    width: 50px * 3
+    z-index: 1
+    a:hover
+        height: 50px * 2
 #socials > *
-    width: 75px
-    height: 75px
+    width: 50px
+    height: 50px
     display: flex
     justify-content: center
     align-items: center
     transition: 0.2s
     outline: 1px solid black
+.social
+    width: 40px
+    height: 40px
 #linkedin
     background-color: #0a66c2
 #github 
     background-color: #171515
 #expo 
     background-color: white
-.social
-    width: 50px
-    height: 50px
-    margin-left: auto
-    margin-right: auto
 
 .cursor
     cursor: pointer
-
-/* Make sure main text content doesn't get cut off */
-@media screen and (max-width: 1250px)
-    main
-        height: 100%
-    #socials 
-        top: 10px
-        left: 0
-        bottom: auto
-        right: auto
-        width: 50px * 3
-        height: 50px
-        z-index: 1
-    #socials > *
-        width: 50px
-        height: 50px
-    .social
-        width: 40px
-        height: 40px
 
 /* Tablet/Smaller Laptop */
 @media screen and (max-width: 1000px)
@@ -315,7 +297,6 @@ main
         align-items: flex-start
         justify-content: center
     #content
-        margin-top: 25%
         width: 100%
         padding: 0px 20px
         h1
@@ -323,7 +304,7 @@ main
         p
             font-size: 1.3em
             margin: 0.8em 0
-    #leftArrow, #rightArrow, .empty
+    #leftArrow, #rightArrow
         display: none
 
 // Phone

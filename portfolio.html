@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="./vendor/jquery-ui/jquery-ui.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link rel="stylesheet" href="./vendor/font-awesome/css/all.min.css">
-        <link rel="stylesheet" href="./css/style.min.css">
+        <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
         <div id="menu">
@@ -23,6 +23,49 @@
             <a href="index.html">Home</a>
             <a href="portfolio.html">Portfolio</a>
         </div>
+        <main id="portfolio">
+            <i id="menuIcon" class="fas fa-bars fa-3x cursor"></i>
+            <a href="index.html" id="leftArrow" class="cursor">
+                <i class="fas fa-angle-left fa-3x"></i>
+                <span class="animate__animated animate__faster">Home</span>
+            </a>
+            <div id="content">
+                <h1>Portfolio</h1>
+                <p>My projects consist of Web Applications built with a variety of languages, simple static websites made for small businesses, mobile apps made with React-Native, and various Cybersecurity & Computer Science class projects. To see more, please visit my Github and Expo!</p>
+                <div id="projects">
+                    <div id="requestPanel" class="panel">
+                        <img src="./images/request_app/requestApp.PNG">
+                        <div class="panelText">
+                            <p>Request Web App</p>
+                        </div>
+                    </div>
+                    <div id="garagePanel" class="panel">
+                        <img src="./images/garage_website/garage.PNG">
+                        <div class="panelText">
+                            <p>Jim Kriley Garage</p>
+                        </div>
+                    </div>
+                    <div id="uploadHubPanel" class="panel">
+                        <img src="./images/upload_hub/upload_hub.PNG">
+                        <div class="panelText">
+                            <p>SRU Upload Hub</p>
+                        </div>
+                    </div>
+                    <div id="covidTrackerPanel" class="panel">
+                        <img src="./images/covid_tracker/covid_tracker.png">
+                        <div class="panelText">
+                            <p>COVID-19 Tracker</p>
+                        </div>
+                    </div>
+                    <div id="conversionAppPanel" class="panel">
+                        <img src="./images/conversion_app/conversion_app.png">
+                        <div class="panelText">
+                            <p>Metric Converter</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
         <div id="requestApp" class="expandedPanel">
             <div class="imageGallery">
                 <div id="requestAppCarousel" class="carousel carousel-fade" data-ride="carousel">
@@ -313,50 +356,6 @@
                 </div>
             </aside>
         </div>
-        <main id="portfolio">
-            <i id="menuIcon" class="fas fa-bars fa-3x cursor"></i>
-            <a href="index.html" id="leftArrow" class="cursor">
-                <i class="fas fa-angle-left fa-3x"></i>
-                <span class="animate__animated animate__faster">Home</span>
-            </a>
-            <div id="content">
-                <h1>Portfolio</h1>
-                <p>My projects consist of Web Applications built with a variety of languages, simple static websites made for small businesses, mobile apps made with React-Native, and various Cybersecurity & Computer Science class projects. To see more, please visit my Github and Expo!</p>
-                <div id="projects">
-                    <div id="requestPanel" class="panel">
-                        <img src="./images/request_app/requestApp.PNG">
-                        <div class="panelText">
-                            <p>Request Web App</p>
-                        </div>
-                    </div>
-                    <div id="garagePanel" class="panel">
-                        <img src="./images/garage_website/garage.PNG">
-                        <div class="panelText">
-                            <p>Jim Kriley Garage</p>
-                        </div>
-                    </div>
-                    <div id="uploadHubPanel" class="panel">
-                        <img src="./images/upload_hub/upload_hub.PNG">
-                        <div class="panelText">
-                            <p>SRU Upload Hub</p>
-                        </div>
-                    </div>
-                    <div id="covidTrackerPanel" class="panel">
-                        <img src="./images/covid_tracker/covid_tracker.png">
-                        <div class="panelText">
-                            <p>COVID-19 Tracker</p>
-                        </div>
-                    </div>
-                    <div id="conversionAppPanel" class="panel">
-                        <img src="./images/conversion_app/conversion_app.png">
-                        <div class="panelText">
-                            <p>Metric Converter</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="empty"></div> <!-- Used to fill space that arrow link should take up -->
-        </main>
         <div id="socials">
             <a href="https://www.linkedin.com/in/qsmith-qshane/" id="linkedin" target="_blank">
                 <img class="social" src="images/linkedIn.png">
@@ -373,5 +372,5 @@
     <script src="./vendor/jquery-ui/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="./js/script.min.js"></script>
+    <script src="./js/script.js"></script>
 </html> 
