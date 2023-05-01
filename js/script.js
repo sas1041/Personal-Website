@@ -67,6 +67,9 @@ $("#leftArrow").on({
 });
 
 // Show expanded panel
+$("#schoolManagementPanel").click(function() {
+    $("#schoolManagement").css("display", "flex");
+});
 $("#requestPanel").click(function() {
     $("#requestApp").css("display", "flex");
 });
