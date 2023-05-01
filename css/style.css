@@ -198,6 +198,10 @@ main {
           box-shadow: 1px 1px 10px #9A9A9A;
 }
 
+.expandedPanel a {
+  color: black;
+}
+
 .panelX {
   position: absolute;
   top: 10px;

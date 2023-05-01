@@ -73,6 +73,9 @@ $("#schoolManagementPanel").click(function() {
 $("#requestPanel").click(function() {
     $("#requestApp").css("display", "flex");
 });
+$("#yardsPanel").click(function() {
+    $("#yardsWebsite").css("display", "flex");
+});
 $("#garagePanel").click(function() {
     $("#garageWebsite").css("display", "flex");
 });
