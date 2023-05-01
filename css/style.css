@@ -77,8 +77,8 @@ main {
 }
 
 #projects .panel {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   background-color: #0077ba;
   border: 1px solid black;
   -webkit-box-shadow: 1px 1px 5px black;
@@ -249,6 +249,24 @@ main {
 
 .projectDescription div {
   width: 45%;
+}
+
+.projectDescription .resourcesUsed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.projectDescription .resourcesUsed h3 {
+  width: 100%;
 }
 
 .projectDescription ul {
@@ -471,8 +489,6 @@ main {
             justify-content: center;
   }
   #projects .panel {
-    width: 300px;
-    height: 300px;
     margin: 15px;
   }
 }
